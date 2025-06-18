@@ -7,14 +7,14 @@ const Dashboard = () => {
 
   // Fetch properties from backend
   const fetchProperties = async () => {
-    const res = await fetch('http://localhost:5000/properties');
+    const res = await fetch('https://property-management-api.onrender.com/properties');
     const data = await res.json();
     setProperties(data);
   };
 
   // Post new property to backend
   const addProperty = async (property) => {
-    await fetch('http://localhost:5000/properties', {
+    await fetch('https://property-management-api.onrender.com/properties', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(property),
