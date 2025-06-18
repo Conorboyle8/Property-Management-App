@@ -14,7 +14,7 @@ const Dashboard = () => {
 
   // Post new property to backend
   const addProperty = async (property) => {
-    await fetch('https://property-management-app-e2ms.onrender.comproperties', {
+    await fetch('https://property-management-app-e2ms.onrender.com/properties', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(property),
